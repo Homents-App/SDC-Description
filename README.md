@@ -1,13 +1,11 @@
 # Project Name
 
-> Project description
+> Winter Is Coming
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/HRR49HouseStark/Description-Module
+
 
 ## Table of Contents
 
@@ -17,23 +15,8 @@
 
 ## Usage
 
-> Some usage instructions
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
+>  Descriptions module include:
+  - home details
+  - local information
+  - home description
 
