@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/description_module', {
-  useMongoClient:true
+  useMongoClient:true,
 });
 
 const db = mongoose.connection;
@@ -8,18 +8,28 @@ db.on('error', console.error.bind(console, 'connection error'))
 db.once('open', ()=> {console.log('MongoDB is running')})
 
 let descriptionSchema = new mongoose.Schema({
+
   'home_info': {
     'address': String,
     'beds': Number,
     'baths': Number,
     'sqft': Number,
     'price': Number,
-    'mortgage_est': 'Number'
+    'mortgage_est': Number
   },
+
+  'local_info': {
+    'map_view': {'image': String, 'text': String},
+    'street_view': {'image': String, 'text': String},
+    'crime': {'image': String, 'text': String},
+    'commute': {'image': String, 'text': String}
+  },
+
   'description_text': {
     'text': String,
   },
-  "home_details": {
+
+  'home_details': {
     'heating': String,
     'property_type': String,
     'cooling_system': String,
@@ -34,18 +44,15 @@ let descriptionSchema = new mongoose.Schema({
     'lot_size': Number,
     'mls/source_id': Number
   },
-  'price_history': {
-    'date': Date,
-    'price': Number,
-    'event': String
-  }
-
+  'price_history': [
+    {'date': Date, 'price': Number, 'event': String}
+  ]
 })
 
-var home = mongoose.model('descriptionSchema', descriptionSchema);
+var Home = mongoose.model('Home', descriptionSchema);
 
-var save = () => {
-
+var save = (homeData) => {
+  return Home.insertOne(homeData);
 }
 
 
