@@ -33,3 +33,8 @@ bower_components/
 .floobit
 .floo
 .flooignore
+
+#files where I saved a copy of few codes
+mockhelper.js
+mockindex.js
+mockSeedData.js
