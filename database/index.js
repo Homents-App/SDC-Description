@@ -51,5 +51,6 @@ const HomeSchema = new mongoose.Schema({
 let Home = mongoose.model('Home', HomeSchema);
 
 module.exports = {
-  Home
+  Home,
+  db
 }

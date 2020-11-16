@@ -1,11 +1,9 @@
 const faker = require('faker');
 const db = require('./helper.js');
 
-
-
 //function generates an array with random data w/o using a foor loop
-const createData = (numUsers, input) => {
-  return new Array(numUsers)
+const createData = (num, input) => {
+  return new Array(num)
     .fill(undefined)
     .map(input);
 }
@@ -16,17 +14,9 @@ const homeInfodata = () => {
   var address = faker.address.streetAddress();
   var beds = faker.random.number({min:1, max:10});
   var baths = faker.random.number({min:1, max:10});
-  var heaters = ['Baseboard', 'Forced Air', 'Boiler', 'Radiant'];
-  var propertyTypes = ['Single Family Home', 'Condo', 'Townhome', 'Multi-Family'];
-  var coolers = ['None', 'Central', 'Air Conditioning'];
-  var exteriorTypes = ['Vinyl', 'Wood', 'Log', 'Metal', 'Brick', 'Stone', 'Concrete'];
-  var floorTypes = ['Bamboo', 'Hardwood', 'Tile', 'Carpet', 'Laminate'];
-  var roofTypes = ['Asphalt', 'Wood Shingle', 'Metal Shingle', 'Clay Tile', 'Concrete Tile', 'Slate'];
   var currentYear = new Date().getFullYear();
   var pastDate = faker.date.past(10);
   var currentDate = new Date();
-  var events = ['Listed For Sale', 'Listing Removed', 'Sold'];
-
 
   return {
 
@@ -62,17 +52,17 @@ const homeInfodata = () => {
     },
 
     home_details: {
-      heating: heaters[Math.floor(Math.random() * 4)],
-      property_type: propertyTypes[Math.floor(Math.random() * 4)],
-      cooling_system: coolers[Math.floor(Math.random() * 3)],
+      heating: faker.random.arrayElement(['Baseboard', 'Forced Air', 'Boiler', 'Radiant']),
+      property_type: faker.random.arrayElement(['Single Family Home', 'Condo', 'Townhome', 'Multi-Family']),
+      cooling_system: faker.random.arrayElement(['None', 'Central', 'Air Conditioning']),
       days_on_market: faker.random.number({min:1, max:30}), //Days on Trulia
       number_of_rooms: beds + baths,
-      exterior: exteriorTypes[Math.floor(Math.random() * 7)],
+      exterior: faker.random.arrayElement(['Vinyl', 'Wood', 'Log', 'Metal', 'Brick', 'Stone', 'Concrete']),
       price_per_sqft: Math.ceil(price / sqft),
-      year_built: faker.random.number({min:1800, max:currentYear}),
+      year_built: faker.random.number({min:1930, max:currentYear}),
       parking_spaces: faker.random.number({min:1, max:5}),
-      floors: floorTypes[Math.floor(Math.random() * 5)],
-      roof: roofTypes[Math.floor(Math.random() * 6)],
+      floors: faker.random.arrayElement(['Bamboo', 'Hardwood', 'Tile', 'Carpet', 'Laminate']),
+      roof: faker.random.arrayElement(['Asphalt', 'Wood Shingle', 'Metal Shingle', 'Clay Tile', 'Concrete Tile', 'Slate']),
       mls_source_id: Math.floor(Math.random() * 100000000),
     },
 
@@ -80,12 +70,13 @@ const homeInfodata = () => {
       {
         date: faker.date.between(pastDate, currentDate),
         price: faker.random.number({min:(price-20), max:price}),
-        event: events[Math.floor(Math.random() * 3)]
+        event: faker.random.arrayElement(['Listed For Sale', 'Listing Removed', 'Sold'])
       }
     ]
 
   }
 }
-let fakeHomeInfo = createData(1, homeInfodata)
+
+let fakeHomeInfo = createData(2, homeInfodata)
 db.saveHomeInfo(fakeHomeInfo)
 
