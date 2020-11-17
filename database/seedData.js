@@ -9,7 +9,7 @@ const createData = (num, input) => {
 }
 
 const homeInfodata = () => {
-  var price = faker.random.number({min:5000, max:20000000});
+  var price = faker.random.number({min:5000, max:2000000});
   var sqft = faker.random.number({min:500, max:5000});
   var address = faker.address.streetAddress();
   var beds = faker.random.number({min:1, max:10});
@@ -26,7 +26,7 @@ const homeInfodata = () => {
       baths: baths,
       sqft: sqft,
       price: price,
-      mortgage_est: 3
+      mortgage_est: ((price * 0.2 * 0.0296) - 825).toFixed(2)
     },
 
     map_view: {
