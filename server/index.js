@@ -13,15 +13,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/home-description', (req, res) => {
- db.collection('Home').find((err, results) => {
-  if (err) {
-    console.log(err)
-    res.sendStatus(404)
-  } else {
-    console.log(results)
-    res.send(JSON.stringify(results))
-  }
- })
+ Home.find({})
+    .then((result) => {
+      res.send(result)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
 })
 
 let port = 3000;
