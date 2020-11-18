@@ -4,7 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/HRR49HouseStark/Description-Module
+  - https://github.com/hrr49-fec07-stark/similar-homes
+  - https://github.com/hrr49-fec07-stark/tours
+  - https://github.com/HRR49HouseStark/Photos
+
 
 
 ## Table of Contents
@@ -15,10 +18,7 @@
 
 ## Usage
 
->  Descriptions module include:
-  - home details
-  - local information
-  - home description
+>
 
 ## Requirements
 
