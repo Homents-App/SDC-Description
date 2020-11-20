@@ -10,21 +10,22 @@ db.once('open', ()=> {console.log('MongoDB is running')})
 const HomeSchema = new mongoose.Schema({
   home_info: {
     address: String,
+    full_address: String,
     beds: Number,
     baths: Number,
     sqft: Number,
     price: Number,
-    mortgage_est: Number
+    mortgage_est: Number,
+    boxIcon: String
   },
 
   map_view: {image: String, text: String},
   street_view: {image: String, text: String},
   schools: {image: String, text: String},
   commute: {image: String, text: String},
+  listing_agent: String,
 
-  description_text: {
-    text: String
-  },
+  description_text: String,
 
   home_details: {
     heating: String,
