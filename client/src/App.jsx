@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import axios from 'axios';
+import s from './styles/Globals.css';
+
 import HomeInfo from './components/home_info';
 import LocalInfo from './components/local_info';
 import Description from './components/description';
