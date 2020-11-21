@@ -1,14 +1,10 @@
 import React from 'react';
 
-var Description= ({description_text}) => {
-
-
-  return (
-    <div className="description">
-      <div className="description-txt">Description</div>
-      <div className="txt-box">{description_text}</div>
-     </div>
-  )
-}
+const Description = ({ descriptionText }) => (
+  <div className="description">
+    <div className="description-txt">Description</div>
+    <div className="txt-box">{descriptionText}</div>
+  </div>
+);
 
 export default Description;

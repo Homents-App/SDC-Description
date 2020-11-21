@@ -1,17 +1,13 @@
-const {Home} = require('./index.js');
+const { Home } = require('./index.js');
 
-var saveHomeInfo = (input) => {
-  return Home.insertMany(input)
-  .then((data)=> {
-    console.log(data, 'data inserted')
+const saveHomeInfo = (input) => Home.insertMany(input)
+  .then((data) => {
+    console.log(data, 'data inserted');
   })
   .catch((err) => {
-    console.log(err)
-  })
-}
+    console.log(err);
+  });
 
 module.exports = {
-  saveHomeInfo
-}
-
-
+  saveHomeInfo,
+};

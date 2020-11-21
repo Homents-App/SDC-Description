@@ -1,7 +1,7 @@
 import React from 'react';
 
-var PriceHistory = ({home_date, event, home_price}) => {
-var date = home_date.slice(0, 10)
+const PriceHistory = ({ homeDate, event, homePrice }) => {
+  const date = homeDate.slice(0, 10);
 
   return (
     <div className="price-history">
@@ -15,13 +15,13 @@ var date = home_date.slice(0, 10)
           </tr>
           <tr>
             <td>{date}</td>
-            <td>${home_price}</td>
+            <td>${homePrice}</td>
             <td>{event}</td>
           </tr>
         </table>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default PriceHistory;

@@ -8,16 +8,21 @@
   "version": "1.0.0",
   "description": "Winter Is Coming",
   "main": "./server/app.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "start": "node ./server/index.js",
+    "devStart": "nodemon server/index.js --watch server --watch dist",
+    "build": "webpack --watch",
+    "seed": "node database/seedData.js"
+  },
   "dependencies": {
     "axios": "^0.21.0",
     "babel-preset-airbnb": "^5.0.0",
     "body-parser": "^1.19.0",
-    "eslint-config-airbnb": "^18.2.1",
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "mongodb-bluebird": "^0.1.2",
     "mongoose": "^5.10.14",
-    "puppeteer": "^5.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "supertest": "^6.0.1",
@@ -29,17 +34,14 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
     "babel-loader": "^8.2.1",
-    "eslint": "^7.13.0",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^26.6.3",
     "webpack": "^4.44.2"
-  },
-  "scripts": {
-    "test": "jest --detectOpenHandles",
-    "start": "node ./server/index.js",
-    "devStart": "nodemon server/index.js --watch server --watch dist",
-    "build": "webpack --watch",
-    "seed": "node database/seedData.js"
   },
   "repository": {
     "type": "git",

@@ -1,57 +1,58 @@
 const mongoose = require('mongoose');
+
 mongoose.connect('mongodb://localhost/description_module', {
-  useNewUrlParser:true, useUnifiedTopology: true
+  useNewUrlParser: true, useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error'))
-db.once('open', ()=> {console.log('MongoDB is running')})
+db.on('error', console.error.bind(console, 'connection error'));
+db.once('open', () => { console.log('MongoDB is running'); });
 
 const HomeSchema = new mongoose.Schema({
-  home_info: {
+  homeInfo: {
     address: String,
-    full_address: String,
+    fullAddress: String,
     beds: Number,
     baths: Number,
     sqft: Number,
     price: Number,
-    mortgage_est: Number,
-    boxIcon: String
+    mortgageEst: Number,
+    boxIcon: String,
   },
 
-  map_view: {image: String, text: String},
-  street_view: {image: String, text: String},
-  schools: {image: String, text: String},
-  commute: {image: String, text: String},
-  listing_agent: String,
+  mapView: { image: String, text: String },
+  streetView: { image: String, text: String },
+  schools: { image: String, text: String },
+  commute: { image: String, text: String },
+  listingAgent: String,
 
-  description_text: String,
+  descriptionText: String,
 
-  home_details: {
+  homeDetails: {
     heating: String,
-    property_type: String,
-    cooling_system: String,
-    days_on_market: Number,
-    number_of_rooms: Number,
+    propertyType: String,
+    coolingSystem: String,
+    daysOnMarket: Number,
+    numberOfRooms: Number,
     exterior: String,
-    price_per_sqft: Number,
-    year_built: Number,
-    parking_spaces: Number,
+    pricePerSqft: Number,
+    yearBuilt: Number,
+    parkingSpaces: Number,
     floors: String,
     roof: String,
-    mls_source_id: Number
+    mlsSourceId: Number,
   },
 
-  price_history: [
-    {date: Date, price: Number, event: String}
-    //generate this entire object random number of times
-  ]
+  priceHistory: [
+    { date: Date, price: Number, event: String },
+    // generate this entire object random number of times
+  ],
 
 });
 
-let Home = mongoose.model('Home', HomeSchema);
+const Home = mongoose.model('Home', HomeSchema);
 
 module.exports = {
   Home,
-  db
-}
+  db,
+};

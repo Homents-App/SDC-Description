@@ -1,25 +1,40 @@
 const express = require('express');
-const {Home, db} = require('../database/index.js');
 const bodyParser = require('body-parser');
-let app = express();
+const { Home } = require('../database/index.js');
 
-app.use(express.static(__dirname + '/../client/public'));
-app.use(bodyParser.urlencoded({extended:true}));
+const app = express();
+
+app.use(express.static(`${__dirname}/../client/public`));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// app.get('/', (req, res) => {
-//   res.status(200).send('success');
-// });
+app.get('/', (req, res) => {
+  res.status(200).send('success');
+});
+
+const formatData = (data) => {
+  const { homeInfo, priceHistory, homeDetails, descriptionText } = data;
+  const localInfo = {
+    mapView: data.mapView,
+    streetView: data.streetView,
+    schools: data.schools,
+    commute: data.commute,
+    listingAgent: data.listingAgent,
+  };
+  homeDetails.address = homeInfo.address;
+
+  return { homeInfo, priceHistory, homeDetails, descriptionText, localInfo };
+};
 
 app.get('/api/home-description', (req, res) => {
- Home.find({})
+  Home.find({})
     .then((result) => {
-      res.status(201).send(result[0])
+      res.status(201).send(formatData(result[0]));
     })
     .catch((err) => {
-      console.log(err)
-      res.status(404).send('unable to save')
-    })
-})
+      console.log(err);
+      res.status(404).send('unable to save');
+    });
+});
 
 module.exports = app;
