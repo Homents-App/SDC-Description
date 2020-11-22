@@ -1,0 +1,32 @@
+.history {
+  margin-top: 20px;
+}
+
+.title {
+  font-family: 'TruliaSansBold';
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 13px;
+}
+
+.table {
+  width: 960px;
+  table-layout: fixed;
+  overflow: hidden;
+  height: auto;
+  border-radius: 8px;
+  border-spacing: 0px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(232, 233, 234);
+}
+
+.th {
+  text-align: left;
+  background-color: rgb(245, 246, 247);
+  padding: 8px 16px;
+  width: 33.3333%;
+}
+
+.td {
+  padding: 8px 16px;
+}

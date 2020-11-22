@@ -1,43 +1,33 @@
 import React from 'react';
 
+import { formatNumber } from '../utils/Logic';
+import { bed, bath, sqft } from '../utils/SVG';
+import s from '../styles/HomeInfo.css';
+
 const HomeInfo = ({ info }) => {
-  console.log(info.boxIcon);
+  const price = formatNumber(info.price.toString());
+  const mortgage = formatNumber(Math.floor(info.mortgageEst).toString());
 
   return (
-    <div className="home-info">
+    <div className={s.info}>
+      <div className={s.firstGrid}>
+        <div className={s.bold}>{info.address}</div>
+        <div>{info.fullAddress}</div>
 
-      <div className="box_right">
-        <div className="street-address">{info.address}</div>
-        <div className="full-address">{info.fullAddress}</div>
-        <div className="svg-block">
-          <div className="bed-block">
-            <div className="bed-icon" />
-            <div className="bed-txt">{info.beds} beds</div>
-          </div>
-          <div className="bath-block">
-            <div className="bath-icon" />
-            <div className="bath-txt">{info.baths} baths</div>
-          </div>
-          <div className="sqft-block">
-            <div className="sqft-icon" />
-            <div className="sqft-txt">{info.sqft} sqft
-            </div>
-          </div>
+        <div className={s.bedBathContainer}>
+          <div className={s.bedBath}>{bed}<div className={s.text}>{info.beds} beds</div></div>
+          <div className={s.bedBath}>{bath}<div className={s.text}>{info.baths} baths</div></div>
+          <div className={s.bedBath}>{sqft}<div className={s.text}>{info.sqft} sqft</div></div>
         </div>
+      </div>
 
+      <div className={s.gridContainer}>
+        <div className={s.bold}>${price}</div>
+        <div className={s.text}>Est. Mortgage ${mortgage}/mo</div>
+        <button className={s.button} type="button">Get Pre-Qualified</button>
       </div>
-      <div className="box_mid">
-        <div className="price-txt">${info.price}</div>
-        <div className="mortgage-txt">Est. Mortgage ${info.mortgageEst}/mo</div>
-        <div className="price-btn">
-          <button className="green-btn" type="button">Get Pre-Qualified</button>
-        </div>
-      </div>
-      <div className="box_left">
-        <div className="icon-pic">
-          <img className="boxIcon-img" src={info.boxIcon} alt="boxIcon" />
-        </div>
-      </div>
+
+      <div className={s.boxContainer}><div className={s.boxIcon} /></div>
     </div>
   );
 };

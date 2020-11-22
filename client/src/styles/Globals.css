@@ -1,6 +1,36 @@
-.main-container {
+/* GLOBALS */
+
+@font-face{
+  font-family:"TruliaSans";src: url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Regular.woff2") format("woff2"), url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Regular.woff") format("woff");
+}
+
+@font-face{
+  font-family:"TruliaSansBold";src: url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Bold.woff2") format("woff2"), url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Bold.woff") format("woff");
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "TruliaSans", system,  -apple-system, Roboto, Segoe UI Bold,  Arial, sans-serif;
+  color: rgb(59, 65, 68);
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+}
+
+:global .bedBathSqftIco {
+  width: 24px;
+  height: 24px;
+}
+
+/* App-level style */
+
+.mainContainer {
   display: flex;
   flex-direction: column;
-  min-width: 30vw;
-  max-width: 60vw;
+  /* Adjust these for sizing! */
+  width: 650px;
+  padding: 16px;
 }
+

@@ -1,38 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const HomeDetails = ({ details }) => (
-  <div className="home-details">
-    <div className="detail-title">Home Details for {details.address}</div>
-    <div className="list-container">
-      <div className="box1">
-        <ul>
-          <li>Cooling System: {details.coolingSys}</li>
-          <li>Days on Market: {details.daysOnMarket} Days on Trulia</li>
-          <li>Exterior: {details.exterior}</li>
-          <li>Year Built: {details.yearBuilt}</li>
-        </ul>
+import { formatHardCoded } from '../utils/Logic';
+import s from '../styles/HomeDetails.css';
+
+import DetailsContainer from './DetailsContainer';
+
+const HomeDetails = ({ details, address }) => {
+  const data = formatHardCoded(details);
+  const [show, toggleShow] = useState(false);
+  const toggle = () => toggleShow(!show);
+  const bText = show ? 'See Less' : 'See All';
+  const flex = show ? `${s.show} ${s.flex}` : s.flex;
+
+  return (
+    <div>
+      <div className={s.header}>Home Details for {address}</div>
+      <div className={flex}>
+        <DetailsContainer items={data[0]} />
+        <DetailsContainer items={data[1]} />
+        <DetailsContainer items={data[2]} />
+        <DetailsContainer items={data[3]} />
       </div>
-      <div className="box2">
-        <ul>
-          <li>Floors: {details.floors}</li>
-          <li>Heating: {details.heating}</li>
-          <li>Property Type: {details.propertyType}</li>
-          <li>Number of Rooms: {details.numberOfRooms}</li>
-        </ul>
-      </div>
-      <div className="box3">
-        <ul>
-          <li>Parking Spaces: {details.parkingSpaces}</li>
-          <li>Price Per Sqft: ${details.pricePerSqft}</li>
-          <li>Roof: {details.roof}</li>
-          <li>MLS/Source ID: {details.mlsSourceId}</li>
-        </ul>
-      </div>
+      <button className={s.button} type="button" onClick={toggle}>{bText}</button>
     </div>
-    <div className="see-all-button-container">
-      <button className="see-all-btn" type="button">See All</button>
-    </div>
-  </div>
-);
+  );
+};
 
 export default HomeDetails;

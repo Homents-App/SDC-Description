@@ -1,0 +1,23 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.bold {
+  font-family: "TruliaSansBold";
+}
+
+.header {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.link {
+  display: inline;
+  color: rgb(0, 120, 130);
+  text-decoration: none;
+  cursor: pointer;
+}

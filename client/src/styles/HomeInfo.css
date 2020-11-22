@@ -1,0 +1,118 @@
+.info {
+  display: flex;
+  flex-direction: row;
+}
+
+.firstGrid {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 16px 8px 0;
+  border-color: transparent;
+  margin-right: 21px;
+  margin-left: -7px
+}
+
+.gridContainer {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 16px 8px 0;
+  border-color: transparent;
+}
+
+.bold {
+  font-family: "TruliaSansBold", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+  line-height: 1.14;
+  font-size: 28px;
+  width: max-content;
+}
+
+.bedBathContainer {
+  display: flex;
+  padding: 16px 0 0;
+}
+
+.bedBath {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: 8px;
+}
+
+.text {
+  margin: 0 4px;
+  white-space: nowrap;
+}
+
+.boxContainer {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 16px 8px 0;
+  border-color: transparent;
+  overflow: hidden;
+  min-width: 90px;
+  height: 106px;
+  border-radius: 8px;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.boxIcon {
+  content: "";
+  position: relative;
+  inset: 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transform: scale(1);
+  cursor: pointer;
+  transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  background-image: url("https://maps.googleapis.com/maps/api/staticmap?zoom=14&size=156x106&scale=1&markers=icon%3Ahttps%3A%2F%2Fstatic.trulia-cdn.com%2Fimages%2Fapp-shopping%2Fmap-marker-txl3R%2FMapMarkerHouseIcon_large%401x.png%7Cscale%3A1%7C37.733211517333984%2C-122.45701599121094&style=feature%3Aadministrative%7Cvisibility%3Aoff&style=feature%3Apoi%7Cvisibility%3Aoff&key=AIzaSyCzWKDOMLGYlR3C9dltAR7sbLvcQEWNcvc&signature=M5YQrAUzQiXtzDX0UyyMEYp_L9c%3D");
+  min-width: 90px;
+  height: 106px;
+}
+
+.boxIcon:hover {
+  backface-visibility: hidden;
+  transform: scale(1.15);
+}
+
+.button {
+  margin: 0px 0px 16px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  transition: top 0.1s ease 0s, box-shadow 0.1s ease 0s, border-color 0.1s ease 0s, background-color 0.1s ease 0s, color 0.1s ease 0s;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 120, 130);
+  border-color: transparent;
+  width: 164px;
+  padding: 8px 16px;
+  box-shadow: none;
+}
+
+.button:hover {
+  color: rgb(0, 120, 130);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(0, 120, 130);
+}
+
+.button:focus {
+  color: rgb(0, 120, 130);
+  background-color: rgb(224, 247, 248);
+  border-color: rgb(0, 120, 130);
+}
+
+.button:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 120, 130);
+  border-color: transparent;
+  box-shadow: none;
+}

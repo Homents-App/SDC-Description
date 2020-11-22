@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/description_module', {
+mongoose.connect('mongodb://localhost/truliaInfoDb', {
   useNewUrlParser: true, useUnifiedTopology: true,
 });
 

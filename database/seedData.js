@@ -28,7 +28,7 @@ const homeInfodata = () => {
       baths,
       sqft,
       price,
-      mortgage_est: ((price * 0.2 * 0.0296) - 825).toFixed(2),
+      mortgageEst: ((price * 0.2 * 0.0296) - 825).toFixed(2),
       boxIcon: 'https://media-exp1.licdn.com/dms/image/C4E1BAQEDsBF9qsm5pA/company-background_10000/0?e=2159024400&v=beta&t=Prdds8dn0WCH7_B7h6cIN4qcT4oTfcQmZi06PFZ5aes',
     },
 

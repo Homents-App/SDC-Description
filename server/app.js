@@ -21,8 +21,6 @@ const formatData = (data) => {
     commute: data.commute,
     listingAgent: data.listingAgent,
   };
-  homeDetails.address = homeInfo.address;
-
   return { homeInfo, priceHistory, homeDetails, descriptionText, localInfo };
 };
 

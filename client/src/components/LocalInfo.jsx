@@ -1,41 +1,36 @@
 import React from 'react';
 
-const LocalInfo = ({ info }) => (
-  <div className="local-info">
-    <div className="local-txt">Local Information</div>
-    <div className="slider-boxes">
-      <div className="map-box">
-        <div className="map-icon">
-          <img className="map-img" src={info.mapView.image} alt="mapImg" />
-        </div>
-        <div className="map-heading">Map View</div>
-        <div className="map-txt">{info.mapView.text}</div>
-      </div>
+import { agent } from '../utils/SVG';
+import s from '../styles/LocalInfo.css';
 
-      <div className="street-box">
-        <div className="street-icon">
-          <img className="street-img" src={info.streetView.image} alt="streetImg" />
-        </div>
-        <div className="street-heading">Street View</div>
-        <div className="street-txt">{info.streetView.text}</div>
-      </div>
-      <div className="school-box">
-        <div className="school-icon">
-          <img className="schools-img" src={info.schools.image} alt="schoolImg" />
-        </div>
-        <div className="school-heading">Schools</div>
-        <div className="school-txt">{info.schools.text}</div>
-      </div>
-      <div className="commute-box">
-        <div className="commute-icon">
-          <img className="commute-img" src={info.commute.image} alt="commuteImg" />
-        </div>
-        <div className="commute-heading">Commute</div>
-        <div className="commute-txt">{info.commute.text}</div>
-      </div>
+import LocalSlider from './LocalSlider';
+
+const crime = {
+  n: 'Crime', image: 'https://static.trulia-cdn.com/images/txl3R/local_cards/crime.svg', text: 'Lowest crime rate relative to its area.',
+};
+
+const shopneat = {
+  n: 'Shop & Eat', image: 'https://static.trulia-cdn.com/images/txl3R/local_cards/shop_eat.svg', text: '135 Restaurants\n35 Groceries\n22 Nightlife',
+};
+
+const LocalInfo = ({ info }) => {
+  // Slider items should have map, street, school, crime, commute, shop & eat
+  const sliderItems = [
+    { n: 'Map View', image: info.mapView.image, text: info.mapView.text },
+    { n: 'Street View', image: info.streetView.image, text: info.streetView.text },
+    { n: 'Schools', image: info.schools.image, text: info.schools.text },
+    crime,
+    { n: 'Commute', image: info.commute.image, text: info.commute.text },
+    shopneat,
+  ];
+
+  return (
+    <div className={s.info}>
+      <div className={`${s.bold} ${s.header}`}>Local Information</div>
+      <LocalSlider sliderItems={sliderItems} />
+      <div>Listing Agent: <p className={s.link}>{info.listingAgent}</p>{agent}</div>
     </div>
-    <div className="listing-agent">Listing Agent: {info.listingAgent}</div>
-  </div>
-);
+  );
+};
 
 export default LocalInfo;
