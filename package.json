@@ -13,6 +13,7 @@
     "start": "node ./server/index.js",
     "devStart": "nodemon server/index.js --watch server --watch dist",
     "build": "webpack --watch",
+    "production":"webpack --config webpack.config.js && node server/index.js",
     "seed": "node database/seedData.js"
   },
   "dependencies": {
