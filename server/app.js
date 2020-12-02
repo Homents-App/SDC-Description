@@ -37,7 +37,7 @@ app.get('/api/home-description', (req, res) => {
 });
 
 
-const const createData = (num, input) => new Array(num)
+const createData = (num, input) => new Array(num)
   .fill(undefined)
   .map(input);
 
@@ -126,7 +126,7 @@ app.post('/api/home-description', (req, res) => {
 });
 
 app.delete('/api/home-description', (req, res) => {
-  Home.remove(exterior, 'Metal');
+  Home.remove(exterior, 'Metal')
   .then((result) => {
     res.status(201).send('Data deleted');
   })
@@ -137,7 +137,7 @@ app.delete('/api/home-description', (req, res) => {
 });
 
 app.put('/api/home-description', (req, res) => {
-  Home.updateMany({exterior: 'Metal'}, {$set: {exterior: 'Plastic' }});
+  Home.updateMany({exterior: 'Metal'}, {$set: {exterior: 'Plastic' }})
   .then((result) => {
     res.status(201).send('Data Updated');
   })
