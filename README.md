@@ -42,8 +42,9 @@ npm install
 
 ## CRUD
 
-Action	                                      Method	    URL
-Create a new listing	                        POST	      /api/home-description
-Get listing information 	                    GET	        /api/home-description
-Update listing information                	  PUT	        /api/home-description
-Delete a listing	                            DELETE	    /api/home-description
+| Action | Method | URL |
+|---|---|---|
+Create a new listing|POST|/api/home-description
+Get listing information|GET|/api/home-description
+Update listing information|PUT|/api/home-description
+Delete a listing|DELETE|/api/home-description
