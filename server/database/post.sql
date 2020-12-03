@@ -2,7 +2,6 @@ DROP DATABASE IF EXISTS HomeSchema;
 CREATE DATABASE HomeSchema;
 
 CREATE TABLE IF NOT EXISTS homeInfo (
-  id SERIAL NOT NULL,
   address VARCHAR(144),
   fullAddress VARCHAR(144),
   beds INT,
@@ -36,7 +35,7 @@ CREATE TABLE IF NOT EXISTS homeDetails (
 );
 
 CREATE TABLE IF NOT EXISTS priceHistory (
-  date Date,
+  date VARCHAR(144),
   price INT,
   event VARCHAR(144)
 );
@@ -85,3 +84,4 @@ COPY priceHistory(date, price, event)
 FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homeprices.csv'
 DELIMITER ','
 CSV HEADER;
+

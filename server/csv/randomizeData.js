@@ -21,22 +21,13 @@ const mapdata = () => {
   'Explore the area around ${address}.'\n`;
 };
 
-const streetdata = () => {
-  return `'https://www.moneycrashers.com/wp-content/uploads/2018/12/tips-find-best-neighborhood-live-in-1068x713.jpg', 'Take a virtual walk around the neighborhood.'\n`;
-};
+const streetdata = () => '\'https://www.moneycrashers.com/wp-content/uploads/2018/12/tips-find-best-neighborhood-live-in-1068x713.jpg\', \'Take a virtual walk around the neighborhood.\'\n';
 
-const schooldata = () => {
-   return `'https://www.ceias.nau.edu/capstone/projects/ME/2018/POBABalloonInspection/images/demo/map.png', 'Learn about the schools in this area.'\n`;
-};
+const schooldata = () => '\'https://www.ceias.nau.edu/capstone/projects/ME/2018/POBABalloonInspection/images/demo/map.png\', \'Learn about the schools in this area.\'\n';
 
-const commutedata = () => {
-   return `'https://miro.medium.com/max/2392/1*uqdecsusmkON9hqir3eW4A.png', '${faker.random.number({ min: 10, max: 100 })}% of residents commute by car.'\n`;
-};
+const commutedata = () => `'https://miro.medium.com/max/2392/1*uqdecsusmkON9hqir3eW4A.png', '${faker.random.number({ min: 10, max: 100 })}% of residents commute by car.'\n`;
 
-const agentdata = () => {
-  return `${faker.name.firstName()} ${faker.name.lastName()}\n`;
-
-};
+const agentdata = () => `${faker.name.firstName()} ${faker.name.lastName()}\n`;
 
 const descriptiondata = () => {
   const beds = faker.random.number({ min: 1, max: 10 });
