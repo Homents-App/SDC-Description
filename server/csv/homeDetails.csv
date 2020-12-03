@@ -1,0 +1,101 @@
+heating, propertyType, coolingSystem, daysOnMarket, numberOfRooms, exterior, pricePerSqft, yearBuilt, parkingSpaces, floors, roof, mlsSourceId
+Forced Air, Multi-Family, None, 10, 10, Metal, 728, 1992, 2, Carpet, Asphalt, 97871324
+Boiler, Single Family Home, None, 12, 10, Wood, 263, 1969, 3, Tile, Concrete Tile, 76113934
+Forced Air, Condo, None, 15, 20, Metal, 189, 1973, 4, Tile, Clay Tile, 1339331
+Boiler, Multi-Family, Air Conditioning, 16, 8, Stone, 386, 2004, 2, Laminate, Metal Shingle, 78996902
+Forced Air, Single Family Home, Central, 12, 8, Concrete, 630, 1957, 1, Tile, Metal Shingle, 85252010
+Baseboard, Multi-Family, Air Conditioning, 29, 11, Metal, 1640, 1986, 2, Tile, Concrete Tile, 48509981
+Forced Air, Condo, None, 22, 11, Concrete, 114, 2007, 4, Bamboo, Clay Tile, 97333423
+Forced Air, Townhome, None, 27, 11, Stone, 884, 1946, 1, Carpet, Metal Shingle, 94303827
+Forced Air, Townhome, Air Conditioning, 27, 3, Concrete, 175, 1979, 1, Tile, Concrete Tile, 7819664
+Baseboard, Townhome, Air Conditioning, 25, 7, Log, 1302, 1966, 1, Hardwood, Wood Shingle, 42410298
+Radiant, Multi-Family, None, 28, 8, Vinyl, 927, 1995, 3, Carpet, Concrete Tile, 12374831
+Forced Air, Single Family Home, Central, 15, 9, Stone, 635, 2001, 3, Tile, Slate, 16525617
+Radiant, Condo, None, 11, 8, Vinyl, 60, 1936, 3, Laminate, Metal Shingle, 60162098
+Radiant, Condo, Central, 16, 16, Stone, 984, 1973, 4, Tile, Clay Tile, 95078497
+Radiant, Multi-Family, Air Conditioning, 12, 10, Stone, 206, 2008, 5, Bamboo, Slate, 54524551
+Baseboard, Single Family Home, None, 27, 12, Metal, 526, 1974, 5, Laminate, Slate, 69017945
+Radiant, Townhome, Central, 17, 11, Concrete, 651, 2008, 1, Laminate, Slate, 66317373
+Boiler, Multi-Family, Central, 14, 15, Vinyl, 465, 2009, 3, Bamboo, Slate, 27700273
+Forced Air, Townhome, Central, 1, 15, Wood, 276, 1955, 5, Bamboo, Concrete Tile, 53893520
+Baseboard, Multi-Family, Air Conditioning, 25, 11, Stone, 193, 1967, 4, Tile, Wood Shingle, 78904730
+Radiant, Single Family Home, Air Conditioning, 27, 12, Log, 1389, 1985, 5, Laminate, Slate, 85581497
+Baseboard, Condo, Central, 29, 12, Brick, 466, 1931, 2, Laminate, Metal Shingle, 85410269
+Radiant, Single Family Home, Central, 1, 13, Stone, 113, 1948, 2, Carpet, Concrete Tile, 7105588
+Boiler, Single Family Home, Central, 13, 11, Wood, 73, 1964, 4, Laminate, Metal Shingle, 49091250
+Boiler, Multi-Family, None, 21, 10, Log, 2503, 1934, 2, Hardwood, Wood Shingle, 87711972
+Forced Air, Multi-Family, Central, 6, 9, Log, 1099, 1954, 4, Hardwood, Asphalt, 4369049
+Forced Air, Condo, Central, 26, 13, Concrete, 1163, 1972, 1, Tile, Concrete Tile, 56020742
+Radiant, Townhome, Air Conditioning, 8, 10, Log, 341, 2013, 5, Hardwood, Wood Shingle, 71850660
+Baseboard, Single Family Home, None, 7, 13, Log, 36, 1960, 3, Bamboo, Slate, 90221580
+Radiant, Single Family Home, Central, 6, 10, Log, 521, 1941, 5, Tile, Clay Tile, 52401391
+Baseboard, Condo, None, 10, 9, Stone, 259, 1976, 4, Carpet, Wood Shingle, 83195742
+Baseboard, Multi-Family, Air Conditioning, 4, 14, Metal, 622, 1945, 2, Hardwood, Concrete Tile, 95678896
+Boiler, Condo, Air Conditioning, 6, 4, Stone, 1096, 1932, 2, Carpet, Concrete Tile, 87954428
+Radiant, Multi-Family, Air Conditioning, 9, 3, Wood, 162, 1976, 2, Carpet, Concrete Tile, 2452494
+Baseboard, Condo, None, 16, 19, Log, 1619, 1977, 2, Hardwood, Metal Shingle, 77630762
+Radiant, Condo, Air Conditioning, 12, 19, Vinyl, 1376, 2002, 4, Tile, Clay Tile, 82393383
+Baseboard, Single Family Home, Central, 22, 4, Brick, 68, 2013, 4, Laminate, Asphalt, 41644804
+Radiant, Townhome, Air Conditioning, 27, 13, Brick, 651, 1936, 3, Bamboo, Concrete Tile, 32303109
+Baseboard, Townhome, Air Conditioning, 6, 9, Brick, 849, 1993, 2, Hardwood, Asphalt, 75787370
+Radiant, Multi-Family, Air Conditioning, 10, 4, Stone, 630, 1971, 4, Bamboo, Slate, 31507314
+Forced Air, Townhome, Central, 23, 18, Vinyl, 896, 1969, 2, Hardwood, Metal Shingle, 81651964
+Baseboard, Multi-Family, Central, 18, 9, Brick, 193, 1942, 2, Carpet, Clay Tile, 68011569
+Radiant, Townhome, Air Conditioning, 11, 19, Wood, 106, 2007, 4, Bamboo, Slate, 67412916
+Boiler, Single Family Home, None, 9, 5, Stone, 88, 1991, 5, Tile, Wood Shingle, 63786621
+Radiant, Single Family Home, Air Conditioning, 7, 15, Vinyl, 976, 1968, 5, Laminate, Wood Shingle, 72455349
+Forced Air, Townhome, Central, 24, 10, Concrete, 123, 2010, 4, Carpet, Asphalt, 54079642
+Baseboard, Multi-Family, Air Conditioning, 8, 14, Metal, 117, 1937, 2, Carpet, Asphalt, 58735242
+Baseboard, Townhome, Central, 2, 7, Log, 188, 2016, 2, Hardwood, Slate, 58129530
+Baseboard, Townhome, Central, 28, 12, Brick, 534, 2003, 4, Laminate, Wood Shingle, 11728976
+Radiant, Single Family Home, Air Conditioning, 13, 12, Log, 157, 1960, 1, Laminate, Clay Tile, 52504277
+Radiant, Townhome, Air Conditioning, 5, 8, Concrete, 163, 1988, 1, Tile, Slate, 27518300
+Baseboard, Townhome, Central, 27, 9, Vinyl, 541, 2010, 5, Tile, Clay Tile, 55370102
+Boiler, Single Family Home, Central, 11, 17, Brick, 82, 1932, 1, Carpet, Metal Shingle, 7050375
+Boiler, Multi-Family, Air Conditioning, 20, 12, Vinyl, 207, 1988, 5, Tile, Concrete Tile, 67036959
+Radiant, Single Family Home, None, 30, 17, Stone, 815, 1962, 4, Bamboo, Metal Shingle, 12022489
+Forced Air, Condo, None, 2, 11, Concrete, 250, 1990, 5, Bamboo, Wood Shingle, 66225734
+Baseboard, Townhome, None, 2, 14, Wood, 1472, 2020, 4, Laminate, Slate, 20929546
+Baseboard, Multi-Family, None, 13, 6, Stone, 850, 1999, 4, Carpet, Slate, 59269319
+Radiant, Townhome, Central, 21, 11, Log, 697, 1943, 3, Tile, Metal Shingle, 20759103
+Boiler, Multi-Family, Air Conditioning, 27, 6, Wood, 611, 1986, 4, Carpet, Metal Shingle, 82020940
+Baseboard, Condo, Air Conditioning, 7, 11, Brick, 195, 1985, 4, Tile, Asphalt, 32016530
+Boiler, Multi-Family, None, 13, 13, Log, 139, 1969, 3, Carpet, Wood Shingle, 79172974
+Boiler, Townhome, Air Conditioning, 15, 14, Vinyl, 424, 2020, 4, Tile, Concrete Tile, 36043914
+Baseboard, Condo, Central, 12, 11, Log, 171, 1971, 2, Tile, Asphalt, 43955304
+Baseboard, Single Family Home, Central, 2, 16, Concrete, 463, 2017, 2, Laminate, Metal Shingle, 74434022
+Forced Air, Single Family Home, None, 5, 5, Metal, 108, 2006, 5, Laminate, Metal Shingle, 40087126
+Radiant, Townhome, Central, 18, 12, Vinyl, 409, 1946, 1, Laminate, Concrete Tile, 76462532
+Boiler, Condo, Air Conditioning, 8, 9, Log, 110, 1970, 4, Hardwood, Wood Shingle, 10639533
+Boiler, Condo, Air Conditioning, 24, 7, Vinyl, 281, 2014, 5, Hardwood, Slate, 46235050
+Baseboard, Single Family Home, None, 23, 14, Metal, 371, 2018, 1, Bamboo, Asphalt, 27526474
+Radiant, Condo, Central, 15, 10, Concrete, 491, 1941, 1, Bamboo, Metal Shingle, 91522864
+Radiant, Condo, Central, 26, 12, Wood, 1307, 2014, 1, Hardwood, Asphalt, 45573190
+Forced Air, Multi-Family, Air Conditioning, 30, 10, Metal, 678, 2018, 3, Laminate, Asphalt, 56826795
+Radiant, Single Family Home, Central, 19, 7, Vinyl, 261, 2015, 1, Carpet, Wood Shingle, 29964613
+Radiant, Townhome, Central, 17, 15, Wood, 380, 1940, 3, Hardwood, Metal Shingle, 65103507
+Forced Air, Single Family Home, Central, 15, 6, Stone, 71, 2000, 4, Tile, Slate, 88661079
+Boiler, Townhome, Air Conditioning, 13, 18, Stone, 392, 2005, 2, Hardwood, Slate, 52526446
+Radiant, Townhome, Central, 13, 8, Brick, 370, 2003, 1, Carpet, Metal Shingle, 93326077
+Forced Air, Single Family Home, Air Conditioning, 9, 12, Wood, 1453, 2020, 4, Bamboo, Asphalt, 24775873
+Boiler, Condo, Air Conditioning, 3, 10, Stone, 214, 2001, 4, Hardwood, Wood Shingle, 62834229
+Boiler, Single Family Home, None, 14, 15, Log, 680, 1968, 2, Bamboo, Clay Tile, 62142673
+Boiler, Multi-Family, None, 4, 11, Log, 1283, 1962, 3, Hardwood, Wood Shingle, 10516442
+Boiler, Condo, None, 29, 10, Vinyl, 325, 1988, 1, Carpet, Concrete Tile, 71674931
+Boiler, Single Family Home, None, 11, 9, Vinyl, 240, 1955, 1, Hardwood, Metal Shingle, 21358711
+Radiant, Single Family Home, None, 20, 16, Wood, 553, 1988, 1, Carpet, Concrete Tile, 92266111
+Baseboard, Multi-Family, None, 23, 14, Brick, 1075, 1937, 3, Laminate, Wood Shingle, 59390519
+Boiler, Multi-Family, Central, 6, 12, Wood, 254, 1943, 3, Tile, Asphalt, 44282743
+Forced Air, Single Family Home, Air Conditioning, 24, 16, Wood, 213, 1976, 5, Tile, Metal Shingle, 84487641
+Forced Air, Single Family Home, Central, 14, 7, Concrete, 208, 1970, 1, Laminate, Concrete Tile, 33907985
+Baseboard, Townhome, Air Conditioning, 17, 8, Stone, 239, 1968, 4, Hardwood, Slate, 72566726
+Forced Air, Multi-Family, None, 24, 6, Wood, 454, 1963, 4, Bamboo, Asphalt, 51668380
+Boiler, Multi-Family, Air Conditioning, 23, 12, Wood, 66, 1972, 3, Hardwood, Clay Tile, 87550329
+Boiler, Condo, Air Conditioning, 25, 10, Brick, 52, 2019, 3, Hardwood, Slate, 90871709
+Forced Air, Townhome, Central, 18, 6, Stone, 929, 1944, 4, Tile, Wood Shingle, 42350391
+Forced Air, Single Family Home, Air Conditioning, 16, 14, Vinyl, 483, 1972, 2, Carpet, Clay Tile, 40815483
+Baseboard, Condo, Central, 15, 8, Log, 2569, 1975, 4, Laminate, Metal Shingle, 32753052
+Radiant, Townhome, Air Conditioning, 27, 13, Concrete, 58, 1988, 1, Carpet, Asphalt, 71078941
+Radiant, Multi-Family, Central, 11, 15, Stone, 726, 1969, 1, Carpet, Slate, 71225849
+Radiant, Single Family Home, None, 7, 11, Metal, 442, 1932, 5, Carpet, Concrete Tile, 42125754
+Boiler, Single Family Home, Central, 7, 6, Brick, 324, 2009, 5, Hardwood, Metal Shingle, 44382587
