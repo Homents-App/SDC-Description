@@ -11,14 +11,13 @@ const homeInfodata = () => {
   const zipcode = faker.address.zipCode();
   const city = faker.address.city();
 
-  return `${address}, '${city}, ${faker.random.arrayElement(['AZ', 'AL', 'AK', 'AR', 'CT', 'KS', 'LA', 'NV', 'OH', 'PA', 'NY'])} ${zipcode.slice(0, 5)} ', ${beds}, ${baths}, ${sqft}, ${price}, ${((price * 0.2 * 0.0296) - 825).toFixed(2)}, 'https://media-exp1.licdn.com/dms/image/C4E1BAQEDsBF9qsm5pA/company-background_10000/0?e=2159024400&v=beta&  t=Prdds8dn0WCH7_B7h6cIN4qcT4oTfcQmZi06PFZ5aes'\n`;
+  return `${address}>'${city}, ${faker.random.arrayElement(['AZ', 'AL', 'AK', 'AR', 'CT', 'KS', 'LA', 'NV', 'OH', 'PA', 'NY'])} ${zipcode.slice(0, 5)}'>${beds}>${baths}>${sqft}>${price}>${((price * 0.2 * 0.0296) - 825).toFixed(2)}>'https://media-exp1.licdn.com/dms/image/C4E1BAQEDsBF9qsm5pA/company-background_10000/0?e=2159024400&v=beta&t=Prdds8dn0WCH7_B7h6cIN4qcT4oTfcQmZi06PFZ5aes'\n`;
 };
 
 const mapdata = () => {
   const address = faker.address.streetAddress();
 
-  return `'https://cdn.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_640/https://s22908.pcdn.co/wp-content/uploads/2020/02/google-maps-alternatives.jpg',
-  'Explore the area around ${address}.'\n`;
+  return `'https://cdn.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_640/https://s22908.pcdn.co/wp-content/uploads/2020/02/google-maps-alternatives.jpg' > 'Explore the area around ${address}.'\n`;
 };
 
 const streetdata = () => '\'https://www.moneycrashers.com/wp-content/uploads/2018/12/tips-find-best-neighborhood-live-in-1068x713.jpg\', \'Take a virtual walk around the neighborhood.\'\n';
@@ -34,7 +33,7 @@ const descriptiondata = () => {
   const baths = faker.random.number({ min: 1, max: 10 });
   const city = faker.address.city();
 
-  return `Very beautiful ${beds} bedroom and ${baths} bathroom home located in ${city}. The roomy primary bedroom includes an en-suite bath with tile standup shower and walk-in closet. The second bedroom is large with plenty of room for a queen size bed with a dresser and offers two closets. The guest bathroom is just across the hall and includes a deep soaking tub with shower plus a linen closet. An in-unit laundry closet is also accessed off the hallway. A 12ftx14ft basement storage unit is included. Steps from grocery, wine & liquor, fitness, dog park, dry cleaners, pharmacy and the best shops and restaurants this amazing neighborhood has to offer. Easy to show!\n`;
+  return `Very beautiful ${beds} bedroom and ${baths} bathroom home located in ${city}.\n`;
 };
 
 const detailsdata = () => {

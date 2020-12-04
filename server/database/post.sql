@@ -2,65 +2,65 @@ DROP DATABASE IF EXISTS HomeSchema;
 CREATE DATABASE HomeSchema;
 
 CREATE TABLE IF NOT EXISTS homeInfo (
-  address VARCHAR(144),
-  fullAddress VARCHAR(144),
+  address VARCHAR(255),
+  fullAddress VARCHAR(255),
   beds INT,
   baths INT,
   sqft INT,
   price INT,
-  mortgageEst INT,
-  boxIcon VARCHAR(144)
+  mortgageEst NUMERIC,
+  boxIcon VARCHAR(255)
 );
 
-CREATE TABLE IF NOT EXISTS mapView ( image VARCHAR(144), text VARCHAR(144) );
-CREATE TABLE IF NOT EXISTS streetView ( image VARCHAR(144), text VARCHAR(144) );
-CREATE TABLE IF NOT EXISTS schools ( image VARCHAR(144), text VARCHAR(144) );
-CREATE TABLE IF NOT EXISTS commute ( image VARCHAR(144), text VARCHAR(144) );
-CREATE TABLE IF NOT EXISTS listingAgent( listingAgent VARCHAR(144) );
-CREATE TABLE IF NOT EXISTS descriptionText( descriptionText VARCHAR(144) );
+CREATE TABLE IF NOT EXISTS mapView ( img VARCHAR(255), descrip VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS streetView ( img VARCHAR(255), descrip VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS schools ( img VARCHAR(255), descrip VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS commute ( img VARCHAR(255), descrip VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS listingAgent( listingAgent VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS descriptionText( descriptiontext text );
 
 CREATE TABLE IF NOT EXISTS homeDetails (
-  heating VARCHAR(144),
-  propertyType VARCHAR(144),
-  coolingSystem VARCHAR(144),
+  heating VARCHAR(255),
+  propertyType VARCHAR(255),
+  coolingSystem VARCHAR(255),
   daysOnMarket INT,
   numberOfRooms INT,
-  exterior VARCHAR(144),
+  exterior VARCHAR(255),
   pricePerSqft INT,
   yearBuilt INT,
   parkingSpaces INT,
-  floors VARCHAR(144),
-  roof VARCHAR(144),
+  floors VARCHAR(255),
+  roof VARCHAR(255),
   mlsSourceId INT
 );
 
 CREATE TABLE IF NOT EXISTS priceHistory (
-  date VARCHAR(144),
+  date VARCHAR(255),
   price INT,
-  event VARCHAR(144)
+  event VARCHAR(255)
 );
 
-COPY homeInfo(id, address, fullAddress, beds, baths, sqft, price, mortgageEst, boxIcon)
+COPY homeInfo(address, fullAddress, beds, baths, sqft, price, mortgageEst, boxIcon)
 FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homeInfo.csv'
-DELIMITER ','
+DELIMITER '>'
 CSV HEADER;
 
-COPY mapView(image, text)
+COPY mapView(img, descrip)
 FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homemaps.csv'
-DELIMITER ','
+DELIMITER '>'
 CSV HEADER;
 
-COPY streetView(image, text)
+COPY streetView(img, descrip)
 FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homestreets.csv'
 DELIMITER ','
 CSV HEADER;
 
-COPY schools(image, text)
+COPY schools(img, descrip)
 FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homeschools.csv'
 DELIMITER ','
 CSV HEADER;
 
-COPY commute(image, text)
+COPY commute(img, descrip)
 FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homecommutes.csv'
 DELIMITER ','
 CSV HEADER;
@@ -70,9 +70,9 @@ FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homeagents.csv'
 DELIMITER ','
 CSV HEADER;
 
-COPY descriptionText(descriptionText)
+COPY descriptionText(descriptiontext)
 FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homedescriptions.csv'
-DELIMITER ','
+DELIMITER '>'
 CSV HEADER;
 
 COPY homeDetails(heating, propertyType, coolingSystem, daysOnMarket, numberOfRooms, exterior, pricePerSqft, yearBuilt, parkingSpaces, floors, roof, mlsSourceId)
