@@ -77,8 +77,7 @@ const agentFile = path.join(__dirname, '/homeagents.csv');
 const agentStream = fs.createWriteStream(agentFile);
 const agentHeader = 'listingAgent\n';
 agentStream.write(agentHeader, 'utf-8');
-writeCSV(agentStream, agentlines, agentdata, 'utf-8', () => {
-  console.log('FINISH CSV');
-  console.timeEnd();
-  agentStream.end();
-});
+writeCSV(agentStream, agentlines, agentdata, 'utf-8', () => { agentStream.end(); });
+
+console.log('FINISH CSV');
+console.timeEnd();
