@@ -2,6 +2,7 @@ DROP DATABASE IF EXISTS HomeSchema;
 CREATE DATABASE HomeSchema;
 
 CREATE TABLE IF NOT EXISTS homeInfo (
+  id SERIAL PRIMARY KEY,
   address VARCHAR(255),
   fullAddress VARCHAR(255),
   beds INT,
@@ -12,14 +13,15 @@ CREATE TABLE IF NOT EXISTS homeInfo (
   boxIcon VARCHAR(255)
 );
 
-CREATE TABLE IF NOT EXISTS mapView ( img VARCHAR(255), descrip VARCHAR(255) );
-CREATE TABLE IF NOT EXISTS streetView ( img VARCHAR(255), descrip VARCHAR(255) );
-CREATE TABLE IF NOT EXISTS schools ( img VARCHAR(255), descrip VARCHAR(255) );
-CREATE TABLE IF NOT EXISTS commute ( img VARCHAR(255), descrip VARCHAR(255) );
-CREATE TABLE IF NOT EXISTS listingAgent( listingAgent VARCHAR(255) );
-CREATE TABLE IF NOT EXISTS descriptionText( descriptiontext text );
+CREATE TABLE IF NOT EXISTS mapView ( id SERIAL PRIMARY KEY, img VARCHAR(255), descrip VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS streetView ( id SERIAL PRIMARY KEY, img VARCHAR(255), descrip VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS schools ( id SERIAL PRIMARY KEY, img VARCHAR(255), descrip VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS commute ( id SERIAL PRIMARY KEY, img VARCHAR(255), descrip VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS listingAgent( id SERIAL PRIMARY KEY, listingAgent VARCHAR(255) );
+CREATE TABLE IF NOT EXISTS descriptionText( id SERIAL PRIMARY KEY, descriptiontext text );
 
 CREATE TABLE IF NOT EXISTS homeDetails (
+  id SERIAL PRIMARY KEY,
   heating VARCHAR(255),
   propertyType VARCHAR(255),
   coolingSystem VARCHAR(255),
@@ -35,6 +37,7 @@ CREATE TABLE IF NOT EXISTS homeDetails (
 );
 
 CREATE TABLE IF NOT EXISTS priceHistory (
+  id SERIAL PRIMARY KEY,
   date VARCHAR(255),
   price INT,
   event VARCHAR(255)
@@ -72,7 +75,7 @@ CSV HEADER;
 
 COPY descriptionText(descriptiontext)
 FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homedescriptions.csv'
-DELIMITER '>'
+DELIMITER ','
 CSV HEADER;
 
 COPY homeDetails(heating, propertyType, coolingSystem, daysOnMarket, numberOfRooms, exterior, pricePerSqft, yearBuilt, parkingSpaces, floors, roof, mlsSourceId)
