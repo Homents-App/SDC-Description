@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import React from 'react';
 
 import { formatNumber } from '../utils/Logic';
@@ -6,13 +7,13 @@ import s from '../styles/HomeInfo.css';
 
 const HomeInfo = ({ info }) => {
   const price = formatNumber(info.price.toString());
-  const mortgage = formatNumber(Math.floor(info.mortgageEst).toString());
+  const mortgage = formatNumber(Math.floor(info.mortgageest).toString());
 
   return (
     <div className={s.info}>
       <div className={s.firstGrid}>
         <div className={s.bold}>{info.address}</div>
-        <div>{info.fullAddress}</div>
+        <div>{info.fulladdress}</div>
 
         <div className={s.bedBathContainer}>
           <div className={s.bedBath}>{bed}<div className={s.text}>{info.beds} beds</div></div>
