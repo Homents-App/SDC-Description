@@ -19,50 +19,7 @@ app.get('/api/home-info/:id', (req, res) => {
       res.send(err);
     });
 });
-// app.get('/api/home-map/:id', (req, res) => {
-//   getMap(req.params.id)
-//     .then((data) => {
-//       res.status(200);
-//       res.send(data);
-//     })
-//     .catch((err) => {
-//       res.status(404);
-//       res.send(err);
-//     });
-// });
-// app.get('/api/home-street/:id', (req, res) => {
-//   getStreet(req.params.id)
-//     .then((data) => {
-//       res.status(200);
-//       res.send(data);
-//     })
-//     .catch((err) => {
-//       res.status(404);
-//       res.send(err);
-//     });
-// });
-// app.get('/api/home-school/:id', (req, res) => {
-//   getSchool(req.params.id)
-//     .then((data) => {
-//       res.status(200);
-//       res.send(data);
-//     })
-//     .catch((err) => {
-//       res.status(404);
-//       res.send(err);
-//     });
-// });
-// app.get('/api/home-comm/:id', (req, res) => {
-//   getComm(req.params.id)
-//     .then((data) => {
-//       res.status(200);
-//       res.send(data);
-//     })
-//     .catch((err) => {
-//       res.status(404);
-//       res.send(err);
-//     });
-// });
+
 app.get('/api/home-agent/:id', (req, res) => {
   getAgent(req.params.id)
     .then((data) => {
@@ -109,7 +66,7 @@ app.get('/api/home-descrip/:id', (req, res) => {
 });
 
 // POST
-app.post('/api/home-info/:id', (req, res) => {
+app.post('/api/home-info', (req, res) => {
   newHome(req.params)
     .then((data) => {
       res.status(200);
