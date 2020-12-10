@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const { writeCSV } = require('./writer.js');
-const { homeInfodata, detailsdata, pricedata, mapdata, streetdata, commutedata, descriptiondata, agentdata, schooldata } = require('./randomizeData.js');
+const { homeInfodata, detailsdata, pricedata, descriptiondata, agentdata } = require('./randomizeData.js');
 
 // HOMEINFODATA
 console.log('START CSV');
@@ -31,30 +31,6 @@ const pricelines = 10000000;
 const priceFile = path.join(__dirname, '/homeprices.csv');
 const priceStream = fs.createWriteStream(priceFile);
 writeCSV(priceStream, pricelines, pricedata, 'utf-8', () => { priceStream.end(); });
-
-// MAPDATA
-const maplines = 1;
-const mapFile = path.join(__dirname, '/homemaps.csv');
-const mapStream = fs.createWriteStream(mapFile);
-writeCSV(mapStream, maplines, mapdata, 'utf-8', () => { mapStream.end(); });
-
-// STREETDATA
-const streetlines = 1;
-const streetFile = path.join(__dirname, '/homestreets.csv');
-const streetStream = fs.createWriteStream(streetFile);
-writeCSV(streetStream, streetlines, streetdata, 'utf-8', () => { streetStream.end(); });
-
-// COMMUTEDATA
-const commutelines = 200000;
-const commuteFile = path.join(__dirname, '/homecommutes.csv');
-const commuteStream = fs.createWriteStream(commuteFile);
-writeCSV(commuteStream, commutelines, commutedata, 'utf-8', () => { commuteStream.end(); });
-
-// SCHOOLDATA
-const schoollines = 1;
-const schoolFile = path.join(__dirname, '/homeschools.csv');
-const schoolStream = fs.createWriteStream(schoolFile);
-writeCSV(schoolStream, schoollines, schooldata, 'utf-8', () => { schoolStream.end(); });
 
 // AGENTDATA
 const agentlines = 200000;

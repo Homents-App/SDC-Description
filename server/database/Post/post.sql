@@ -13,10 +13,6 @@ CREATE TABLE IF NOT EXISTS homeInfo (
   boxIcon VARCHAR(255)
 );
 
-CREATE TABLE IF NOT EXISTS mapView ( id SERIAL PRIMARY KEY, img VARCHAR(255), descrip VARCHAR(255) );
-CREATE TABLE IF NOT EXISTS streetView ( id SERIAL PRIMARY KEY, img VARCHAR(255), descrip VARCHAR(255) );
-CREATE TABLE IF NOT EXISTS schools ( id SERIAL PRIMARY KEY, img VARCHAR(255), descrip VARCHAR(255) );
-CREATE TABLE IF NOT EXISTS commute ( id SERIAL PRIMARY KEY, img VARCHAR(255), descrip VARCHAR(255) );
 CREATE TABLE IF NOT EXISTS listingAgent( id SERIAL PRIMARY KEY, listingAgent VARCHAR(255) );
 CREATE TABLE IF NOT EXISTS descriptionText( id SERIAL PRIMARY KEY, descriptiontext text );
 
@@ -46,26 +42,6 @@ CREATE TABLE IF NOT EXISTS priceHistory (
 COPY homeInfo(address, fullAddress, beds, baths, sqft, price, mortgageEst, boxIcon)
 FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homeInfo.csv'
 DELIMITER '>'
-CSV HEADER;
-
-COPY mapView(img, descrip)
-FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homemaps.csv'
-DELIMITER '>'
-CSV HEADER;
-
-COPY streetView(img, descrip)
-FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homestreets.csv'
-DELIMITER ','
-CSV HEADER;
-
-COPY schools(img, descrip)
-FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homeschools.csv'
-DELIMITER ','
-CSV HEADER;
-
-COPY commute(img, descrip)
-FROM '/Users/john/Desktop/Hack/SDC/description/server/csv/homecommutes.csv'
-DELIMITER ','
 CSV HEADER;
 
 COPY listingAgent(listingAgent)

@@ -27,7 +27,6 @@ class App extends React.Component {
 
     axios.get(`/api/home-info/${id}`)
       .then((response) => {
-        console.log(response.data.rows[0]);
         const homeInfo = response.data.rows[0];
         this.setState({ homeInfo });
       })
@@ -60,18 +59,7 @@ class App extends React.Component {
       });
 
     const idTwo = Math.floor(Math.random() * (200000 - 1) + 1);
-    // axios.get(`/api/home-comm/${idTwo}`)
-    //   .then((response) => {
-    //     this.setState((prevState) => ({
-    //       localInfo: {
-    //         ...prevState.localInfo,
-    //         commute: response.data.rows[0],
-    //       },
-    //     }));
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
+
     axios.get(`/api/home-agent/${idTwo}`)
       .then((response) => {
         this.setState((prevState) => ({
@@ -84,46 +72,6 @@ class App extends React.Component {
       .catch((error) => {
         console.log(error);
       });
-
-    // const idThree = 1;
-    // axios.get(`/api/home-map/${idThree}`)
-    //   .then((response) => {
-    //     this.setState((prevState) => ({
-    //       localInfo: {
-    //         ...prevState.localInfo,
-    //         mapView: response.data.rows[0],
-    //       },
-    //     }));
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-    // axios.get(`/api/home-street/${idThree}`)
-    //   .then((response) => {
-    //     this.setState((prevState) => ({
-    //       localInfo: {
-    //         ...prevState.localInfo,
-    //         streetView: response.data.rows[0],
-    //       },
-    //     }));
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-    // axios.get(`/api/home-school/${idThree}`)
-    //   .then((response) => {
-    //     console.log('sschool', response.data.rows[0]);
-
-    //     this.setState((prevState) => ({
-    //       localInfo: {
-    //         ...prevState.localInfo,
-    //         schools: response.data.rows[0],
-    //       },
-    //     }));
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
   }
 
   render() {

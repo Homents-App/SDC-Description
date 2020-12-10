@@ -14,18 +14,6 @@ const homeInfodata = () => {
   return `${address}>'${city}, ${faker.random.arrayElement(['AZ', 'AL', 'AK', 'AR', 'CT', 'KS', 'LA', 'NV', 'OH', 'PA', 'NY'])} ${zipcode.slice(0, 5)}'>${beds}>${baths}>${sqft}>${price}>${((price * 0.2 * 0.0296) - 825).toFixed(2)}>'https://media-exp1.licdn.com/dms/image/C4E1BAQEDsBF9qsm5pA/company-background_10000/0?e=2159024400&v=beta&t=Prdds8dn0WCH7_B7h6cIN4qcT4oTfcQmZi06PFZ5aes'\n`;
 };
 
-const mapdata = () => {
-  const address = faker.address.streetAddress();
-
-  return `'https://cdn.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_640/https://s22908.pcdn.co/wp-content/uploads/2020/02/google-maps-alternatives.jpg'>'Explore the area around ${address}.'\n`;
-};
-
-const streetdata = () => '\'https://www.moneycrashers.com/wp-content/uploads/2018/12/tips-find-best-neighborhood-live-in-1068x713.jpg\', \'Take a virtual walk around the neighborhood.\'\n';
-
-const schooldata = () => '\'https://www.ceias.nau.edu/capstone/projects/ME/2018/POBABalloonInspection/images/demo/map.png\', \'Learn about the schools in this area.\'\n';
-
-const commutedata = () => `'https://miro.medium.com/max/2392/1*uqdecsusmkON9hqir3eW4A.png', '${faker.random.number({ min: 10, max: 100 })}% of residents commute by car.'\n`;
-
 const agentdata = () => `${faker.name.firstName()} ${faker.name.lastName()}\n`;
 
 const descriptiondata = () => {
@@ -58,10 +46,6 @@ module.exports = {
   homeInfodata,
   detailsdata,
   pricedata,
-  mapdata,
-  streetdata,
-  commutedata,
   descriptiondata,
   agentdata,
-  schooldata,
 };
