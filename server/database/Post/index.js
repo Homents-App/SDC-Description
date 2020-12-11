@@ -4,7 +4,7 @@ const { Pool } = require('pg');
 const pool = new Pool({
   user: process.env.PGUSER,
   password: process.env.PGPASSWORD,
-  host: process.env.PGHOST,
+  host: 'http://52.14.51.216/',
   database: 'HomeSchema',
 });
 

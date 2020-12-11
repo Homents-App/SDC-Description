@@ -11,50 +11,7 @@ const getHome = async (id) => {
   }
   return response;
 };
-// const getMap = async (id) => {
-//   const str = 'SELECT * FROM mapView WHERE id=$1;';
-//   let response;
-//   try {
-//     response = await pool.query(str, [id]);
-//   } catch (error) {
-//     console.error(error);
-//     throw (error);
-//   }
-//   return response;
-// };
-// const getStreet = async (id) => {
-//   const str = 'SELECT * FROM streetView WHERE id=$1;';
-//   let response;
-//   try {
-//     response = await pool.query(str, [id]);
-//   } catch (error) {
-//     console.error(error);
-//     throw (error);
-//   }
-//   return response;
-// };
-// const getSchool = async (id) => {
-//   const str = 'SELECT * FROM schools WHERE id=$1;';
-//   let response;
-//   try {
-//     response = await pool.query(str, [id]);
-//   } catch (error) {
-//     console.error(error);
-//     throw (error);
-//   }
-//   return response;
-// };
-// const getComm = async (id) => {
-//   const str = 'SELECT * FROM commute WHERE id=$1;';
-//   let response;
-//   try {
-//     response = await pool.query(str, [id]);
-//   } catch (error) {
-//     console.error(error);
-//     throw (error);
-//   }
-//   return response;
-// };
+
 const getAgent = async (id) => {
   const str = 'SELECT * FROM listingAgent WHERE id=$1;';
   let response;

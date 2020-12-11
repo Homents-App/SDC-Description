@@ -47,3 +47,6 @@ newrelic.js
 
 #Artillery
 stress.yml
+
+#EC2
+*.pem
