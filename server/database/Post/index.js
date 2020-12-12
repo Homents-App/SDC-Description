@@ -19,3 +19,5 @@ module.exports = {
 // sudo psql -h 172.31.21.61 -U postgres
 // root
 // host    all             all             172.31.21.61/0          md5
+// DATABASE_URL=postgres://postgres:school@172.31.21.61:5432/HomeSchema
+// /home/ubuntu/SDC-Description/server/database/Post/post.sql
