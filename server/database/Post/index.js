@@ -4,7 +4,7 @@ const { Pool } = require('pg');
 const pool = new Pool({
   user: process.env.PGUSER,
   password: process.env.PGPASSWORD,
-  host: 'http://52.14.51.216/',
+  host: '172.31.21.61',
   database: 'HomeSchema',
 });
 
@@ -16,3 +16,6 @@ pool.on('error', (err, client) => {
 module.exports = {
   pool,
 };
+// sudo psql -h 172.31.21.61 -U postgres
+// root
+// host    all             all             172.31.21.61/0          md5
