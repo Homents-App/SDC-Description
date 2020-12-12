@@ -2,10 +2,11 @@ require('dotenv').config();
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: process.env.PGUSER,
-  password: process.env.PGPASSWORD,
+  user: 'postgres',
+  password: 'school',
   host: '172.31.21.61',
-  database: 'HomeSchema',
+  database: 'homeschema',
+  port: '5432',
 });
 
 // eslint-disable-next-line no-unused-vars
