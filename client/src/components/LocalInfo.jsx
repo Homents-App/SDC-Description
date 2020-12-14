@@ -16,11 +16,11 @@ const shopneat = {
 const LocalInfo = ({ info }) => {
   // Slider items should have map, street, school, crime, commute, shop & eat
   const sliderItems = [
-    { n: 'Map View', image: 'https://www.ceias.nau.edu/capstone/projects/ME/2018/POBABalloonInspection/images/demo/map.png', text: 'Learn about the schools in this area.' },
+    { n: 'Map View', image: '', text: 'Learn about the schools in this area.' },
     { n: 'Street View', image: 'https://www.moneycrashers.com/wp-content/uploads/2018/12/tips-find-best-neighborhood-live-in-1068x713.jpg', text: 'Take a virtual walk around the neighborhood.' },
     { n: 'Schools', image: 'https://www.ceias.nau.edu/capstone/projects/ME/2018/POBABalloonInspection/images/demo/map.png', text: 'Learn about the schools in this area.' },
     crime,
-    { n: 'Commute', image: 'https://miro.medium.com/max/2392/1*uqdecsusmkON9hqir3eW4A.png', text: '28% of residents commute by car.' },
+    { n: 'Commute', image: 'https://im4.ezgif.com/tmp/ezgif-4-52540f05f1b6.webp', text: '28% of residents commute by car.' },
     shopneat,
   ];
 
